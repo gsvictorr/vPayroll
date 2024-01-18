@@ -47,7 +47,7 @@
         font-weight: bold;
     }
 
-    .team-vposts {
+    .team-vstok {
         font-weight: bold;
         color: #007520;
         font-size: 1rem;
@@ -65,7 +65,7 @@
         <br>
         <br>
         <p class="info">Caso não tenha solicitado uma conta em nossa plataforma, favor não clicar no link.</p>
-        <p class="team-vposts">Equipe Vstok.</p>
+        <p class="team-vstok">Equipe Vstok.</p>
     </div>
 </body>
 

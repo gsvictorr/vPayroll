@@ -39,7 +39,7 @@ public class EmailService {
         return content.toString();
     }
 
-    public void sendEmailCode(String receiver, String tittle, Map<String, Object> properties) {
+    public void sendEmailCode(String receiver, String tittle, String senderName, Map<String, Object> properties) {
         try {
             MimeMessage mimeMessage = javaMailSender.createMimeMessage();
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
@@ -47,7 +47,7 @@ public class EmailService {
             if (tittle != null && receiver != null && sender != null) {
                 mimeMessageHelper.setSubject(tittle);
                 mimeMessageHelper.setTo(receiver);
-                mimeMessageHelper.setFrom(receiver);
+                mimeMessageHelper.setFrom(receiver, senderName);
                 mimeMessageHelper.setText(emailTemplate(properties), true);
                 javaMailSender.send(mimeMessageHelper.getMimeMessage());
             } else {
