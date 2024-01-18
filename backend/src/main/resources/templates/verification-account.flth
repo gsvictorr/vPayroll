@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+    * {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    h1 {
+        background-color: #007520;
+        padding: 10px;
+        color: #fff;
+        border-radius: 10px;
+    }
+
+    h3 {
+        font-weight: 400;
+    }
+
+    a {
+        width: 200px;
+        height: 200px;
+        background-color: #007520;
+        padding: 15px;
+        border-radius: 10px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        list-style: none;
+        text-decoration: none;
+
+    }
+    .info {
+        color: #363636;
+        font-size: 0.8rem;
+    }
+
+    .click {
+        font-weight: bold;
+    }
+
+    .team-vposts {
+        font-weight: bold;
+        color: #007520;
+        font-size: 1rem;
+    }
+</style>
+</head>
+
+<body>
+    <div>
+        <h1>Vstok</h1>
+        <h3>Olá, ${name}!</h3>
+        <p class="click">Clique abaixo para verificar sua conta.</p>
+        <br>
+        <a href="${message}">Verificar conta</a>
+        <br>
+        <br>
+        <p class="info">Caso não tenha solicitado uma conta em nossa plataforma, favor não clicar no link.</p>
+        <p class="team-vposts">Equipe Vstok.</p>
+    </div>
+</body>
+
+</html>
