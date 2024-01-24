@@ -2,8 +2,19 @@
 import { Menubar } from "@/components/ui/menubar";
 import { Button } from "@/components/ui/button";
 import { MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarSub, MenubarSubContent, MenubarSubTrigger, MenubarTrigger } from "@/components/ui/menubar";
+import { AuthContext } from "@/context/auth-context";
+import { useContext, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export function MenuBar(){
+
+    const authContext = useContext(AuthContext);
+    const router = useRouter();
+
+    function clickSignOut(){
+        authContext.signOut();
+        router.push("/");
+    }
 
     return(
         <>
@@ -58,7 +69,7 @@ export function MenuBar(){
                         </MenubarContent>
                 </MenubarMenu>
             </Menubar>
-            <Button className="bg-principal text-slate-50 font-normal rounded-none w-20 transition ease-in-out delay-130 hover:bg-red-900 duration-300">Logout</Button>
+            <Button onClick={clickSignOut} className="bg-principal text-slate-50 font-normal rounded-none w-20 transition ease-in-out delay-130 hover:bg-red-900 duration-300">Logout</Button>
         </div>
         
         </>
