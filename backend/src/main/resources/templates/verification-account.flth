@@ -19,12 +19,12 @@
         padding: 10px;
         color: #000;
         border-radius: 10px;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
-    h2{
+    span{
         color: #b70000;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     h3 {
@@ -63,7 +63,7 @@
 
 <body>
     <div>
-        <h1>v<h2>Payroll</h2></h1>
+        <h1>v<span>Payroll</span></h1>
         <h3>Olá, ${name}!</h3>
         <p class="click">Clique abaixo para verificar sua conta.</p>
         <br>

@@ -43,7 +43,7 @@ public class UserService {
             Map<String, Object> email = new HashMap<>();
             email.put("name", newUser.getName());
             email.put("message", "http://localhost:8080/user/verify?code=" + newUser.getVerificationCode());
-            emailService.sendEmailCode(newUser.getEmail(), "Ative sua conta", "Vstok", email);
+            emailService.sendEmailCode(newUser.getEmail(), "Ative sua conta!", "vPayroll", email);
             UserResponse userResponse = new UserResponse(newUser.getId(), newUser.getName(), newUser.getEmail(),
                     newUser.getPassword(), newUser.getRole());
             return userResponse;
