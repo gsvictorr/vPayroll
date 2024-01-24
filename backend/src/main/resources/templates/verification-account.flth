@@ -15,10 +15,16 @@
     }
 
     h1 {
-        background-color: #007520;
+        background-color: #fff;
         padding: 10px;
-        color: #fff;
+        color: #000;
         border-radius: 10px;
+        font-size: 1.3rem;
+    }
+
+    h2{
+        color: #b70000;
+        font-size: 1.6rem;
     }
 
     h3 {
@@ -28,7 +34,7 @@
     a {
         width: 200px;
         height: 200px;
-        background-color: #007520;
+        background-color: #b70000;
         padding: 15px;
         border-radius: 10px;
         color: #fff;
@@ -49,7 +55,7 @@
 
     .team-vstok {
         font-weight: bold;
-        color: #007520;
+        color: #b70000;
         font-size: 1rem;
     }
 </style>
@@ -57,7 +63,7 @@
 
 <body>
     <div>
-        <h1>Vstok</h1>
+        <h1>v<h2>Payroll</h2></h1>
         <h3>Olá, ${name}!</h3>
         <p class="click">Clique abaixo para verificar sua conta.</p>
         <br>
@@ -65,7 +71,7 @@
         <br>
         <br>
         <p class="info">Caso não tenha solicitado uma conta em nossa plataforma, favor não clicar no link.</p>
-        <p class="team-vstok">Equipe Vstok.</p>
+        <p class="team-vstok">Equipe vPayroll.</p>
     </div>
 </body>
 

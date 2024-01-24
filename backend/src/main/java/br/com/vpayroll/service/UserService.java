@@ -59,7 +59,7 @@ public class UserService {
         } else {
             user.setVerificationCode(null);
             user.setEnabled(true);
-            userRepository.save(user);
+            userRepository.save(user); 
             return true;
         }
     }
