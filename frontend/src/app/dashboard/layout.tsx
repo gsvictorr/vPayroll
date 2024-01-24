@@ -11,7 +11,7 @@ export default function DashboardLayout({children}: {children: React.ReactNode})
     return(
         <>
         <MenuBar></MenuBar>
-        <div className="container gap-4 bg-gray-50 w-md m-auto mt-6 rounded-md h-96 p-4 shadow-md">
+        <div className="container gap-4 bg-gray-50 w-md m-auto mt-6 rounded-md p-4 shadow-md">
             {children}
             </div>
         </>
