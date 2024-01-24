@@ -121,7 +121,7 @@ export function LoginForm(){
                                 }}
                             />
                             <div className='flex justify-end'>
-                                <Button type="submit" className='bg-principal mt-5 text-slate-50 font-normal rounded-none w-20 transition ease-in-out delay-130 hover:bg-red-600 duration-300'>Login</Button>
+                                <Button type="submit" className='bg-principal mt-5 text-slate-50 font-normal rounded-none transition ease-in-out delay-130 hover:bg-red-900 duration-300 w-20'>Login</Button>
                             </div>
                         </form>
                     </Form>

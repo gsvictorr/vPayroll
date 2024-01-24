@@ -9,6 +9,12 @@ const roboto = Roboto({ weight: "300", subsets: ["latin"]});
 export const metadata: Metadata = {
   title: "vPayroll | Login",
   description: "Software of payroll.",
+  icons: {
+    icon: ['/favicon.ico'],
+    shortcut: ['/apple-touch-icon.png'],
+    apple: ['/apple-touch-icon.png']
+  },
+  manifest: '/site.webmanifest'
 };
 
 export default function RootLayout({
@@ -16,6 +22,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <AuthContextProvider>
     <html lang="pt-BR">

@@ -1,27 +1,19 @@
-import { MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from "@/components/ui/menubar";
-import { Menubar } from "@/components/ui/menubar";
+import { MenuBar } from "@/components/dash-components/custom-menubar";
+import { Metadata } from "next";
 import React from "react";
 
-export default function DashboardLayout({children}: {children: React.ReactNode}){
+export const metadata: Metadata = {
+    title: 'vPayroll | Dashboard',
+    description: 'Software of payroll'
+};
 
+export default function DashboardLayout({children}: {children: React.ReactNode}){
     return(
         <>
-        <div className="container flex h-20 rounded-md items-center m-auto gap-4">
-            <Menubar>
-                <MenubarMenu>
-                    <MenubarTrigger>Funcionários</MenubarTrigger>
-                    <MenubarContent>
-                        <MenubarItem>Pesquisar</MenubarItem>
-                        <MenubarSeparator></MenubarSeparator>
-                        <MenubarItem>Cadastrar</MenubarItem>
-                        <MenubarSeparator></MenubarSeparator>
-                        <MenubarItem>Listar todos</MenubarItem>
-                        <MenubarSeparator></MenubarSeparator>
-                    </MenubarContent>
-                </MenubarMenu>
-            </Menubar>
-        </div>
+        <MenuBar></MenuBar>
+        <div className="container gap-4 bg-gray-50 w-md m-auto mt-6 rounded-md h-96 p-4 shadow-md">
             {children}
+            </div>
         </>
     );
 }
