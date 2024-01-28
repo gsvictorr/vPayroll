@@ -39,7 +39,7 @@ public class UserService {
             newUser.setEnabled(false);
             String code = RandomCode.generateRandomString(64);
             newUser.setVerificationCode(code);
-            User saveUser = userRepository.save(newUser);
+            userRepository.save(newUser);
             Map<String, Object> email = new HashMap<>();
             email.put("name", newUser.getName());
             email.put("message", "http://localhost:8080/user/verify?code=" + newUser.getVerificationCode());
