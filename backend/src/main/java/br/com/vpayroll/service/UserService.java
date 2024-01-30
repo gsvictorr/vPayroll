@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 
 import br.com.vpayroll.dto.user.UserRequest;
 import br.com.vpayroll.dto.user.UserResponse;
+import br.com.vpayroll.exceptions.auth.RegisterException;
 import br.com.vpayroll.model.User;
 import br.com.vpayroll.repository.UserRepository;
-import br.com.vpayroll.service.exceptions.RegisterException;
 import br.com.vpayroll.utils.RandomCode;
 
 @Service
@@ -53,7 +53,7 @@ public class UserService {
     public boolean verifyUser(String verificationCode) {
         User user = userRepository.findByVerificationCode(verificationCode);
 
-        if (user == null || user.isEnabled()) {
+        if (user == null || user.isEnabled() || user.getVerificationCode() == null) {
             return false;
 
         } else {

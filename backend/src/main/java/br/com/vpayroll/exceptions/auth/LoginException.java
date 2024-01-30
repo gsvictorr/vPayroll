@@ -1,4 +1,4 @@
-package br.com.vpayroll.service.exceptions;
+package br.com.vpayroll.exceptions.auth;
 
 import org.springframework.security.core.AuthenticationException;
 
