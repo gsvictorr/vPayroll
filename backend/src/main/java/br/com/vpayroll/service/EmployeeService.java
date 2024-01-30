@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 
 import br.com.vpayroll.dto.employee.EmployeeRequest;
 import br.com.vpayroll.dto.employee.EmployeeResponse;
+import br.com.vpayroll.exceptions.EmployeeException;
 import br.com.vpayroll.model.Employee;
 import br.com.vpayroll.repository.EmployeeRepository;
-import br.com.vpayroll.service.exceptions.EmployeeException;
 
 @Service
 public class EmployeeService {
@@ -21,7 +21,8 @@ public class EmployeeService {
         Employee employee = new EmployeeRequest(employeeRequest.name(), employeeRequest.office(),employeeRequest.scale(), employeeRequest.workedHours()).convert(employeeRequest);
 
         if(employeeRepository.findByName(employee.getName()) != null){
-            throw new EmployeeException("Funcionário já cadastrado.");
+            throw new EmployeeException
+            ("Funcionário já cadastrado.");
         } else{
             employeeRepository.save(employee);
             EmployeeResponse employeeResponse = new EmployeeResponse(employee.getId(), employee.getName(), employee.getOffice(), employee.getScale(), employee.getWorkedHours(), employee.getComments());

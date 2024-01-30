@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.vpayroll.dto.employee.EmployeeRequest;
 import br.com.vpayroll.dto.employee.EmployeeResponse;
+import br.com.vpayroll.exceptions.EmployeeException;
 import br.com.vpayroll.service.EmployeeService;
-import br.com.vpayroll.service.exceptions.EmployeeException;
 import jakarta.validation.Valid;
 
 @RestController

@@ -10,7 +10,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
-import br.com.vpayroll.service.exceptions.EmailException;
+import br.com.vpayroll.exceptions.auth.EmailException;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import jakarta.mail.internet.MimeMessage;

@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import br.com.vpayroll.exceptions.auth.LoginException;
 import br.com.vpayroll.repository.UserRepository;
-import br.com.vpayroll.service.exceptions.LoginException;
 
 @Service
 public class AuthService implements UserDetailsService {
